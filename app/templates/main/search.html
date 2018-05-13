@@ -1,0 +1,12 @@
+{% extends 'common/base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% block title %}
+    搜索
+{% endblock %}
+{% block content %}
+    <div class="container">
+    <h1 align="center">搜索</h1>
+
+    {{ wtf.quick_form(form) }}
+    </div>
+{% endblock %}

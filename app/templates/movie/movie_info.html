@@ -1,0 +1,22 @@
+{% extends 'common/base.html' %}
+{% block title %}
+    电影信息
+{% endblock %}
+{% block content %}
+    <div class="container" style="margin-top: 20px">
+        <ul class="list-group" style="border: hidden ;margin:0;padding:0;">
+            <h2>
+                <li class="list-group-item">{{ mylist[0][1] }}</li>
+            </h2>
+            <h3><li class="list-group-item">{{ mylist[0][5] }}</li></h3>
+            <li class="list-group-item"><img class="list-group-item"><img src="{{ mylist[0][3] }}"></li>
+            <li class="list-group-item"><img src="{{ mylist[0][2] }}" alt=""></li>
+            <li class="list-group-item">
+                {% for url in mylist[0][4] %}
+                    <p><a href="{{ url }}">{{ url }}</a></p>
+                {% endfor %}
+            </li>
+
+        </ul>
+    </div>
+{% endblock %}
